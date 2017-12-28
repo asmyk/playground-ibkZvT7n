@@ -5,4 +5,5 @@ plan:
 projects:
   nodejs:
     root: /nodejs-project
+    buildCommand: yarn install
     runner: node:latest

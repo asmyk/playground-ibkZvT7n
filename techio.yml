@@ -5,6 +5,4 @@ plan:
 projects:
   nodejs:
     root: /nodejs-project
-    runner:
-      name: techio/node-npm-runner
-      version: latest
+    runner: node:latest

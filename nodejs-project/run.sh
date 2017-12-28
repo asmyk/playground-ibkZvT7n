@@ -1,2 +1,3 @@
+#!/bin/bash
 
-    echo "TECHIO> open --static-dir /project/target/basics/index.html"
+echo "TECHIO> open --static-dir /project/target/basics/index.html"

@@ -1,3 +1,6 @@
+import { BaseComponent } from "./FireDOM.component.js";
+import { arePropsEqual } from "./FireDOM.helpers.js";
+
 function FireDOM() {
 };
 
@@ -111,7 +114,7 @@ FireDOM.prototype.updateNodeProps = function (prevElement, nextElement) {
 }
 
 FireDOM.prototype.updateVFnElement = function (prevElement, nextElement, parent) {
-    let propsEqual = false;
+    let propsEqual = arePropsEqual(prevElement.props, nextElement.props);
 
     // element is removed
     if (!nextElement) {
@@ -247,9 +250,4 @@ FireDOM.prototype.render = function (rootNode, app) {
 
 let framework = new FireDOM();
 
-document.addEventListener('DOMContentLoaded', function () {
-    let rootEl = document.getElementById("rootElement");
-
-    FireDOM.render(rootEl, FireDOM.createElement("div",
-        {}, "Hello!"));
-});
+export { framework as FireDOM };
